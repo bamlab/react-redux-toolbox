@@ -2,7 +2,7 @@
 
 import { put } from 'redux-saga/effects';
 
-const MODULE_ACTION_KEY = 'react-redux-utils';
+const MODULE_ACTION_KEY = 'react-redux-toolbox';
 
 export const actionTypes = {
   SHOW_LOADER: `${MODULE_ACTION_KEY}/SHOW_LOADER`,

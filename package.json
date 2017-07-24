@@ -1,5 +1,5 @@
 {
-  "name": "react-redux-utils",
+  "name": "react-redux-toolbox",
   "version": "0.0.0-managed-by-semantic-release",
   "description": "Set of utils for React and Redux development",
   "main": "index.js",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bamlab/react-redux-utils.git"
+    "url": "https://github.com/bamlab/react-redux-toolbox.git"
   },
   "author": "Almouro <contact@almouro.com> (http://alexandremoureaux.com/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bamlab/react-redux-utils/issues"
+    "url": "https://github.com/bamlab/react-redux-toolbox/issues"
   },
-  "homepage": "https://github.com/bamlab/react-redux-utils#readme",
+  "homepage": "https://github.com/bamlab/react-redux-toolbox#readme",
   "devDependencies": {
     "commitizen": "^2.9.6",
     "cz-conventional-changelog": "^2.0.0",
