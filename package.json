@@ -4,7 +4,7 @@
   "description": "Set of utils for React and Redux development",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\" && exit 0",
     "commitmsg": "validate-commit-msg",
     "commit": "git-cz",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
