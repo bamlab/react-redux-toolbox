@@ -1,0 +1,32 @@
+{
+  "name": "react-redux-utils",
+  "version": "0.0.0-managed-by-semantic-release",
+  "description": "Set of utils for React and Redux development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "commitmsg": "validate-commit-msg",
+    "commit": "git-cz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bamlab/react-redux-utils.git"
+  },
+  "author": "Almouro <contact@almouro.com> (http://alexandremoureaux.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bamlab/react-redux-utils/issues"
+  },
+  "homepage": "https://github.com/bamlab/react-redux-utils#readme",
+  "devDependencies": {
+    "commitizen": "^2.9.6",
+    "cz-conventional-changelog": "^2.0.0",
+    "husky": "^0.14.3",
+    "validate-commit-msg": "^2.13.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
