@@ -1,3 +1,3 @@
 // @flow
 
-export default from './LoaderWrapper.container';
+export { default } from './LoaderWrapper.container';
