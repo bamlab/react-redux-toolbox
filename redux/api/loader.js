@@ -1,6 +1,6 @@
 // @flow
 
-import { put } from 'redux-saga/effects';
+import { put, call } from 'redux-saga/effects';
 
 const MODULE_ACTION_KEY = 'react-redux-toolbox';
 
@@ -50,7 +50,12 @@ export const isLoading = (state: any, loaderName: string, reducerName = 'loader'
 
 export const addLoader = (saga: any, loaderName: string) =>
   function* (...args: any): SagaType {
-    yield put(showLoaderCreator(loaderName));
-    yield saga.apply(this, args);
-    yield put(hideLoaderCreator(loaderName));
+    try {
+      yield put(showLoaderCreator(loaderName));
+      yield call(saga, ...args);
+      yield put(hideLoaderCreator(loaderName));
+    } catch (error) {
+      yield put(hideLoaderCreator(loaderName));
+      throw error;
+    }
   };
