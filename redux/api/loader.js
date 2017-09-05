@@ -52,8 +52,9 @@ export const addLoader = (saga: any, loaderName: string) =>
   function* (...args: any): SagaType {
     try {
       yield put(showLoaderCreator(loaderName));
-      yield call(saga, ...args);
+      const result = yield call(saga, ...args);
       yield put(hideLoaderCreator(loaderName));
+      return result;
     } catch (error) {
       yield put(hideLoaderCreator(loaderName));
       throw error;
