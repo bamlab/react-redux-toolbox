@@ -13,12 +13,14 @@ export default (
 ) =>
   function* (...args: any): SagaType {
     try {
-      const { hasTimeOuted } = yield race({
+      const { hasTimeOuted, executeApiSaga } = yield race({
         hasTimeOuted: call(delay, timeout),
         executeApiSaga: saga.apply(this, args),
       });
       if (hasTimeOuted) {
         handleApiException(new Error(TIMEOUT_ERROR));
+      } else {
+        return executeApiSaga;
       }
     } catch (error) {
       handleApiException(error);
